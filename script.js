@@ -18,26 +18,27 @@ textInput.addEventListener('keyup', textMeme)
 let loadFile = function(event) {
     memeImage.src = URL.createObjectURL(event.target.files[0]);
     memeImage.onload = function() {
-      URL.revokeObjectURL(memeImage.src) // free memory
+      URL.revokeObjectURL(memeImage.src) // referência à https://stackoverflow.com/questions/4459379/preview-an-image-before-it-is-uploaded/27165977#27165977
     }
 }
+
 function changeFire(){
     fire.addEventListener('click', function(){
-        coontainer.style.border='3px dashed red'
+        coontainer.style.border='3px dashed rgb(255, 0, 0)'
     })
 }
 changeFire()
 
 function changeWater(){
     water.addEventListener('click', function(){
-        coontainer.style.border='5px double blue'
+        coontainer.style.border='5px double rgb(0, 0, 255)'
     })
 }
 changeWater()
 
 function changeEarth(){
     earth.addEventListener('click', function(){
-        coontainer.style.border='6px groove green'
+        coontainer.style.border='6px groove rgb(0, 128, 0)'
     })
 }
 changeEarth()
