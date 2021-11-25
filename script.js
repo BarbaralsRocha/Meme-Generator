@@ -2,6 +2,9 @@ const textInput = document.getElementById('text-input')
 const coontainer = document.getElementById('meme-image-container')
 const memeTextImage = document.getElementById('meme-text')
 const memeImage = document.getElementById('meme-image');
+const fire = document.getElementById('fire');
+const water = document.getElementById('water');
+const earth = document.getElementById('earth');
 
 
 function textMeme(){
@@ -18,5 +21,23 @@ let loadFile = function(event) {
       URL.revokeObjectURL(memeImage.src) // free memory
     }
 }
+function changeFire(){
+    fire.addEventListener('click', function(){
+        coontainer.style.border='3px dashed red'
+    })
+}
+changeFire()
 
+function changeWater(){
+    water.addEventListener('click', function(){
+        coontainer.style.border='5px double blue'
+    })
+}
+changeWater()
 
+function changeEarth(){
+    earth.addEventListener('click', function(){
+        coontainer.style.border='6px groove green'
+    })
+}
+changeEarth()
